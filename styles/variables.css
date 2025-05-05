@@ -1,0 +1,22 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: "Inter-Variable", sans-serif;
+  --accent-font: "Press Start 2P", sans-serif;
+  --font-wght: 400;
+  --title-wght: 700;
+  --text-color: #000;
+  --accent-color: #fff;
+  /* --bg-image: url(../svg/pattern-light.svg); */
+  --backdrop-color: #000;
+  --button-text-color: #fff;
+  --heart-contour: #000;
+  --heart-fill: red;
+  --transition-duration: 0.8s;
+
+
+  --text-shadow: #fff;
+  --gradient-main-color: #d3d3d3;
+  --gradient-accent-color: #e7e7e7;
+  --gradient-back-color: #1a1a1a;
+}
+ 

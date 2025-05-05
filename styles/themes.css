@@ -1,0 +1,47 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+
+.page.theme-light {
+  --text-color: #000;
+  --accent-color: #fff;
+  /* --bg-image: url(../svg/pattern-light.svg); */
+  --button-text-color: #fff;
+  --heart-contour: #000;
+  --heart-fill: red;
+  --text-shadow: #fff;
+  --gradient-main-color: #d3d3d3;
+  --gradient-accent-color: #e7e7e7;
+  --gradient-back-color: #1a1a1a;
+}
+
+.page.theme-dark {
+  --text-color: #00cc14;
+  --accent-color: #000;
+  /* --bg-image: url(../svg/pattern-dark.svg); */
+  --button-text-color: #00cc14;
+  --heart-contour: #00cc14;
+  --heart-fill: red;
+  --text-shadow: #fff;
+  --gradient-main-color: #000;
+  --gradient-accent-color: #007f0c;
+  --gradient-back-color: #004306;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #00cc14;
+    --accent-color: #000;
+    /* --bg-image: url(../svg/pattern-dark.svg); */
+    --button-text-color: #00cc14;
+    --heart-contour: #00cc14;
+    --heart-fill: red;
+    --text-shadow: #fff;
+    --gradient-main-color: #000;
+    --gradient-accent-color: #007f0c;
+    --gradient-back-color: #004306;
+  }
+}

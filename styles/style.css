@@ -1,0 +1,437 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+
+*/
+
+.page {
+  font-family: var(--main-font, "Inter-Variable", sans-serif);
+  font-variation-settings: "wght" var(--font-wght, 400);
+  color: var(--text-color, #000);
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--gradient-main-color) 0px 2px,
+      transparent 2.01px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--gradient-main-color) 0px 2px,
+      transparent 2.01px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--gradient-accent-color) 0%,
+      var(--gradient-accent-color) 0.01%,
+      var(--gradient-back-color)
+    );
+  background-repeat: repeat;
+  background-attachment: fixed;
+  /* background-image: var(--bg-image, url(../svg/pattern-light.svg)); */
+  /* background-size: 4px; */
+  background-size: cover;
+  background-color: var(--accent-color, #fff);
+}
+
+.block {
+  max-inline-size: clamp(24.375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  background-color: var(--accent-color, #fff);
+  border: 2px solid var(--text-color, #000);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--accent-font, "Press Start 2P", sans-serif);
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-block-start: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem);
+  margin: 100px auto;
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  margin-block-end: 20px;
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+  text-transform: uppercase;
+}
+
+.theme-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__theme-menu {
+  padding-block: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.theme-menu__item {
+  color: var(--text-color, #000);
+  padding-block: 0;
+}
+
+.theme-menu__button:not([disabled]):hover,
+.theme-menu__button:not([disabled]):focus-visible {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.theme-menu__button[disabled] {
+  position: relative;
+  opacity: 0.6;
+  padding-block: 0;
+}
+
+.theme-menu__button[disabled]::before {
+  content: "▶";
+  position: absolute;
+  left: -15px;
+  animation: arrow 0.5s infinite alternate ease-in-out;
+}
+
+.theme-menu__button {
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  min-block-size: 1rem;
+  margin-inline-start: 25px;
+}
+
+.theme-menu__button:not([disabled]) {
+  position: relative;
+  outline: none;
+  border: none;
+}
+
+.theme-menu__button:not([disabled])::after {
+  content: "";
+  position: absolute;
+  inline-size: 100%;
+  inset-block-end: -2px;
+  inset-inline-start: 0;
+  border-bottom: 2px solid currentColor;
+  transform: scaleX(0);
+  transform-origin: left bottom;
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-menu__button:not([disabled]):focus-visible::after {
+  transform: scaleX(1);
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.card__title {
+  font-size: 1.125rem;
+  font-variation-settings: "wght" var(--title-wght, 700);
+  line-height: 1.4;
+  padding: 3px 10px 2px;
+  border-block-end: 2px solid var(--text-color, #000);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-watermark {
+  font-family: var(--accent-font, "Press Start 2P", sans-serif);
+  font-size: 0.875rem;
+  color: transparent;
+  line-height: 0.875rem;
+  position: absolute;
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+  text-shadow: -1px 0 var(--text-shadow), 0 1px var(--text-shadow),
+    1px 0 var(--text-shadow), 0 -1px var(--text-shadow);
+  opacity: 0.6;
+  mix-blend-mode: hard-light;
+  pointer-events: none;
+}
+
+@supports ((text-stroke: 1px #000) or (-webkit-text-stroke: 1px #000)) {
+  .card-watermark {
+    -webkit-text-stroke: 1px var(--text-shadow);
+    text-stroke: 1px var(--text-shadow);
+    text-shadow: none;
+  }
+}
+
+.card__image {
+  inline-size: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.card__text {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  margin-block-start: -5px;
+  padding: 25px;
+  border-block-start: 2px solid var(--text-color, #000);
+}
+
+.text {
+  margin-bottom: 25px;
+}
+
+.card__button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  max-block-size: 38px;
+}
+
+.card__icon-button {
+  cursor: pointer;
+  padding: 0;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.like-icon .contour {
+  fill: var(--heart-contour);
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon .main-body {
+  fill: var(--accent-color, #fff);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--heart-contour);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-fill);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-fill);
+  transition: fill 0.3s linear;
+}
+
+.like-icon .core {
+  fill: var(--accent-color, #fff);
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-contour);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-fill);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-fill);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .heart {
+  animation: increase 0.3s ease-in 0.01s alternate;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s alternate;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border: 2px solid currentColor;
+}
+
+.button {
+  background-color: var(--accent-color);
+  border: 2px solid var(--text-color);
+  outline: none;
+}
+
+.button__text {
+  font-family: var(--accent-font, "Press Start 2P", sans-serif);
+  font-size: 0.875rem;
+  color: var(--button-text-color);
+  line-height: 0.875rem;
+  mix-blend-mode: difference;
+  position: relative;
+  white-space: nowrap;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--text-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  background-color: var(--text-color);
+  transform: scaleX(0);
+  transform-origin: left top;
+  transition: transform 0.5s ease-in-out;
+  inset: 0;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.card__like-button {
+  position: relative;
+  text-align: center;
+  min-inline-size: 135px;
+  max-inline-size: 100%;
+  border: 2px solid var(--text-color, #000);
+}
+
+.card__like-button:hover {
+  color: var(--accent-color, #fff);
+}
+
+.saturate {
+  filter: saturate(200%);
+}
+
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+.sepia {
+  filter: sepia(60%);
+}
+
+.blur {
+  filter: blur(1.5px);
+}
+
+.invert {
+  filter: invert(0.15);
+}
+
+.hue-rotate {
+  filter: hue-rotate(0.8turn);
+}
+
+.filter-group {
+  filter: hue-rotate(0.05turn) saturate(180%) blur(0.5px);
+}
+
+.button__save {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 15px;
+  margin-block-end: 100px;
+}
+
+.button__save svg {
+  inline-size: 24px;
+  block-size: 24px;
+  fill: var(--button-text-color, #000);
+  margin-right: 10px;
+  mix-blend-mode: difference;
+}
+
+.dialog {
+  background-color: var(--accent-color);
+}
+
+.dialog__paragraph {
+  font-family: var(--accent-font, "Press Start 2P", sans-serif);
+  color: var(--text-color, #000);
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+  text-transform: uppercase;
+}
+
+.dialog::backdrop {
+  background-color: var(--backdrop-color);
+  opacity: 0.7;
+}
+
+.dialog .button {
+  position: relative;
+  grid-column: span 2;
+  padding-block-start: 10px;
+  padding-block-end: 8px;
+}
+
+.dialog[open] {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 30px;
+  align-items: center;
+  max-inline-size: clamp(23.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  padding: 30px;
+}
+
+.dialog[open] svg {
+  fill: var(--text-color);
+}
+
+@media (width <= 375.5px) {
+  .button__save {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button__save svg {
+    margin-block-start: 10px;
+  }
+
+  .card-watermark {
+    inset-inline-end: 13px;
+  }
+
+  .dialog[open] {
+    padding: 30px 40px;
+  }
+}

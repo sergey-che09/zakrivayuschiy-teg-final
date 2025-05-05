@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Закрывающий тег</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/themes.css" />
+  </head>
+  <body class="page">
+    <header class="block header">
+      <h1 class="header__title">&lt;/html&gt;</h1>
+      <h2 class="header__subtitle">закрывающий тег</h2>
+      <nav class="theme-menu header__theme-menu">
+        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
+        <ul class="theme-menu__list">
+          <li class="theme-menu__item">
+            <button type="button" data-theme="dark" class="theme-menu__button">
+              Темно
+            </button>
+          </li>
+          <li class="theme-menu__item">
+            <button
+              type="button"
+              data-theme="auto"
+              disabled
+              class="theme-menu__button"
+            >
+              Авто
+            </button>
+          </li>
+          <li class="theme-menu__item">
+            <button type="button" data-theme="light" class="theme-menu__button">
+              Светло
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main_container">
+      <article class="block">
+        <h2 class="card__title">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
+        <div class="card-image-wrapper">
+          <span class="card-watermark">&lt;/HTML&gt;</span>
+          <img
+            class="card__image"
+            loading="lazy"
+            src="./images/car.png"
+            alt="На картинке мы видим автомобиль похожий на фургон по продаже фастфуда, 
+          выполненный в забавном пиксельном стиле. Кузов фургона белый с оранжевой 
+          раздвижной крышей. Окна фургона окрашены в фиолетовый цвет, что придает ему 
+          необычный и привлекательный вид. Фургон стоит на фоне ночного неба, которое 
+          выполнено в темно-фиолетовых и синих тонах. На небе видны звезды и облака, 
+          что создает атмосферу спокойной ночи. Справа от фургона находится столб, 
+          который добавляет глубину изображению и создает ощущение пространства. "
+          />
+        </div>
+        <div class="card__text">
+          <p class="text">
+            Это было самое начало пути. На этом этапе важно было проникнуться
+            основами и настроиться на учёбу. И, возможно, подумать, как новые
+            знания могут повлиять на ваше будущее.
+          </p>
+          <p class="text">Место для ваших воспоминаний о начале обучения.</p>
+
+          <div class="card__button-container">
+            <button type="button" class="card__icon-button">
+              <svg
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--heart-contour)"
+                  />
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+                <path
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--heart-fill)"
+                />
+              </svg>
+            </button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="block">
+        <h2 class="card__title">Первый спринт. Все сложно и непонятно.</h2>
+        <div class="card-image-wrapper">
+          <img
+            class="card__image saturate"
+            loading="lazy"
+            src="./images/img1.png"
+            alt="На фотографии изображена женщина, которая держит в руках фотоаппарат 
+            и смотрит в его видоискатель. Она находится на улице, и её фигура слегка 
+            размыта, что создаёт эффект глубины снимку. На заднем плане расположена 
+            городская улица с широкими тротуарами, и красивыми уличными фонарями. 
+            Освещение мягкое, возможно, это раннее утро до восхода солнца."
+          />
+          <span class="card-watermark">&lt;/HTML&gt;</span>
+        </div>
+        <div class="card__text">
+          <p class="text">
+            В омут CSS и HTML. Все новое, многое не понятно, и главный вопрос:
+            как сотвотить свою первую простенькую страницу?
+          </p>
+          <p class="text">
+            Но, со скрипом страница создана, порция эндорфинов получена, едем
+            дальше ...
+          </p>
+
+          <div class="card__button-container">
+            <button type="button" class="card__icon-button">
+              <svg
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--heart-contour)"
+                  />
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+                <path
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--heart-fill)"
+                />
+              </svg>
+            </button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="block">
+        <h2 class="card__title">Первый спринт. Оно мне надо!</h2>
+        <div class="card-image-wrapper">
+          <img
+            class="card__image grayscale"
+            loading="lazy"
+            src="./images/img2.png"
+            alt="На фотографии изображена узкая улица в историческом районе города. 
+            Слева и справа от дороги расположены старинные здания с характерными 
+            архитектурными элементами, такими как арки и балконы. На одном из балконов 
+            видны растения, что добавляет уют и живость в городской пейзаж. На переднем 
+            плане виден человек, идущий по улице, что придает сцене динамику и жизнь. 
+            Свет падает под углом, создавая тени и подчеркивая текстуру стен и брусчатки. 
+            Атмосфера фотографии передает ощущение спокойствия и уединения несмотря 
+            на то, что это часть городского пространства."
+          />
+          <span class="card-watermark">&lt;/HTML&gt;</span>
+        </div>
+        <div class="card__text">
+          <p class="text">
+            Первый лэндинг позади, он был разминкой. Руки бы дизайнерам оторвать
+            и засунуть ... Но, дизайнеры тоже не зря свой хлеб едят,
+            подстраиваемся.
+          </p>
+          <p class="text">Квесты развивают, главное пройти!</p>
+
+          <div class="card__button-container">
+            <button type="button" class="card__icon-button">
+              <svg
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--heart-contour)"
+                  />
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+                <path
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--heart-fill)"
+                />
+              </svg>
+            </button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="block">
+        <h2 class="card__title">
+          Второй спринт. Все понятно, но это не точно ...
+        </h2>
+        <div class="card-image-wrapper">
+          <img
+            class="card__image sepia"
+            loading="lazy"
+            src="./images/img3.png"
+            alt="На фотографии изображён мотоциклист, который едет по узкой 
+            азиатской улочке явно в бедном квартале. Яркий солнечный день, 
+            создает дополнительный контраст и колорит фотографии, ощущается 
+            шум соседних улиц и крики зазывал и торговцев. "
+          />
+          <span class="card-watermark">&lt;/HTML&gt;</span>
+        </div>
+        <div class="card__text">
+          <p class="text">
+            Погоня за идеальным лендингом из пробирки. Увы живой лендинг от
+            идеального всегда отличается и это нужно не боятся показать.
+          </p>
+          <p class="text">
+            Важнее &mdash; научиться ошибаться. Гениальные изобретения очень
+            часто являются чьими-то ошибками!
+          </p>
+
+          <div class="card__button-container">
+            <button type="button" class="card__icon-button">
+              <svg
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--heart-contour)"
+                  />
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+                <path
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--heart-fill)"
+                />
+              </svg>
+            </button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="block">
+        <h2 class="card__title">Второй спринт. Это не я оно само</h2>
+        <div class="card-image-wrapper">
+          <img
+            class="card__image blur"
+            loading="lazy"
+            src="./images/img4.png"
+            alt="На фотографии изображен рынок, где продаются свежие фрукты и овощи. 
+            В центре изображения виден стенд с надписью SUNLIGHT FARMS. 
+            Под стендом расположены различные овощи, такие как морковь, лук, зелень 
+            и другие. Вокруг стенда видны другие прилавки с продуктами, а также 
+            покупатели и продавцы. Освещение в помещении яркое, что создает приятную 
+            атмосферу для покупок. На заднем плане видны окна, через которые проникает 
+            естественный свет, добавляя естественности и свежести в интерьер рынка."
+          />
+          <span class="card-watermark">&lt;/HTML&gt;</span>
+        </div>
+        <div class="card__text">
+          <p class="text">
+            Первые эмоции - ШОК. Как это вообще возможно сделать? Глубокий вдох,
+            плавный выдох и погнали верстать лэндинг по крупицам.
+          </p>
+          <p class="text">
+            Лэндинг принят, но чувство самозванца присутствует: вроде бы всё
+            делал сам, но как смог сделать - не понятно &#41;&#41;
+          </p>
+
+          <div class="card__button-container">
+            <button type="button" class="card__icon-button">
+              <svg
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--heart-contour)"
+                  />
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+                <path
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--heart-fill)"
+                />
+              </svg>
+            </button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="block">
+        <h2 class="card__title">Третий спринт. К вызовам готов!</h2>
+        <div class="card-image-wrapper">
+          <img
+            class="card__image invert"
+            loading="lazy"
+            src="./images/img5.png"
+            alt="На фотографии изображен человек, который работает за ноутбуком. 
+            Он держит в руках чистый бланк какого-то документа. На экране ноутбука 
+            открыт сайт с тем-же логотипом, что и бланк, вероятно содержит инструкцию 
+            для заполнения бланка. Обстановка выглядит как офис или рабочее место, 
+            где человек сосредоточен на своей задаче."
+          />
+          <span class="card-watermark">&lt;/HTML&gt;</span>
+        </div>
+        <div class="card__text">
+          <p class="text">
+            Все знакомо и просто, но дьявол в деталях. При делатьном подходе
+            получается все незнакомо и не просто, но карты подскажут.
+          </p>
+          <p class="text">
+            С такими знаниями можно замахнуться на создание большинства живых
+            страниц!
+          </p>
+
+          <div class="card__button-container">
+            <button type="button" class="card__icon-button">
+              <svg
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--heart-contour)"
+                  />
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+                <path
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--heart-fill)"
+                />
+              </svg>
+            </button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="block">
+        <h2 class="card__title">Третий спринт. Изо всех сил не теряю фокус</h2>
+        <div class="card-image-wrapper">
+          <img
+            class="card__image hue-rotate"
+            loading="lazy"
+            src="./images/img6.png"
+            alt="На фотографии изображен интерьер, в котором доминирует дерево с 
+            ярко-красными листьями. Дерево расположено в центре композиции и привлекает 
+            внимание своим насыщенным цветом и формой. Вокруг дерева видны элементы 
+            интерьера: белые стены, пол и мебель, что создает контраст с яркими листьями. 
+            Слева от дерева находится каменная скульптура на белом постаменте, а 
+            справа — скамейка, также выполненная в белом цвете. Интерьер выглядит 
+            минималистично и современно, с акцентом на природную красоту дерева. Свет в 
+            помещении мягкий, что подчеркивает детали и создает спокойную атмосферу."
+          />
+          <span class="card-watermark">&lt;/HTML&gt;</span>
+        </div>
+        <div class="card__text">
+          <p class="text">
+            Что это, мучители! Вам предыдущего спринта не хватило! Да прибудет с
+            нами сила.
+          </p>
+          <p class="text">
+            Это было прекрасно, вот и финиш замаячил на горизонте.
+          </p>
+
+          <div class="card__button-container">
+            <button type="button" class="card__icon-button">
+              <svg
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--heart-contour)"
+                  />
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+                <path
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--heart-fill)"
+                />
+              </svg>
+            </button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="block">
+        <h2 class="card__title">Четвертый спринт. Финал.</h2>
+        <div class="card-image-wrapper">
+          <img
+            class="card__image filter-group"
+            loading="lazy"
+            src="./images/img7.png"
+            alt="На фотографии изображен тропический остров с белым песчаным пляжем и 
+            бирюзовой водой. Вокруг пляжа растут пальмы и другие тропические растения, 
+            что создает атмосферу уединенного и живописного места. Вода в море имеет 
+            разные оттенки голубого и бирюзового цветов, что создает красивый контраст 
+            с белым песком. В целом, изображение передает ощущение спокойствия и красоты 
+            тропического рая."
+          />
+          <span class="card-watermark">&lt;/HTML&gt;</span>
+        </div>
+        <div class="card__text">
+          <p class="text">
+            Красота вдохновляет, придает сил, в красоте и гармонии легко найти
+            себя и восстановиться.
+          </p>
+          <p class="text">
+            Большое списибо создателям курса, вы даете возможность поверить в
+            себя, в свои силы!
+          </p>
+
+          <div class="card__button-container">
+            <button type="button" class="card__icon-button">
+              <svg
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path
+                    class="contour"
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="var(--heart-contour)"
+                  />
+                  <path
+                    class="main-body"
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="none"
+                  />
+                  <path
+                    class="core"
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="none"
+                  />
+                </g>
+                <path
+                  class="sparks"
+                  d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                  fill="var(--heart-fill)"
+                />
+              </svg>
+            </button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+      <button
+        type="button"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+        class="button button__save"
+      >
+        <svg viewBox="0 0 29 28">
+          <use href="./svg/floppy.svg#floppy" />
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+      <dialog class="card dialog" id="dialog-id">
+        <svg viewBox="0 0 29 28">
+          <use href="./svg/floppy.svg#floppy" />
+        </svg>
+        <p class="dialog__paragraph">Вставьте дискету, чтобы продолжить</p>
+        <button
+          class="button"
+          type="button"
+          onclick="window['dialog-id'].close()">
+          <span class="button__text">OK</span>
+        </button>
+      </dialog>
+    </main>
+    <script src="./scripts/set-theme.js"></script>
+    <script src="./scripts/like.js"></script>
+  </body>
+</html>
