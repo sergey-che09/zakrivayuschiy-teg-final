@@ -8,6 +8,8 @@
 .page.theme-light {
   --text-color: #000;
   --accent-color: #fff;
+  --font-wght: 400;
+  --title-wght: 700;
   /* --bg-image: url(../svg/pattern-light.svg); */
   --button-text-color: #fff;
   --heart-contour: #000;
@@ -21,6 +23,8 @@
 .page.theme-dark {
   --text-color: #00cc14;
   --accent-color: #000;
+  --font-wght: 465;
+  --title-wght: 785;
   /* --bg-image: url(../svg/pattern-dark.svg); */
   --button-text-color: #00cc14;
   --heart-contour: #00cc14;
@@ -35,6 +39,8 @@
   :root {
     --text-color: #00cc14;
     --accent-color: #000;
+    --font-wght: 465;
+    --title-wght: 785;
     /* --bg-image: url(../svg/pattern-dark.svg); */
     --button-text-color: #00cc14;
     --heart-contour: #00cc14;
